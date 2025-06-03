@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flux Wav | Portfolio Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #111;
+      --fg: #eee;
+      --accent: #00bfa6;
+      --muted: #888;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 0.25rem;
+      margin-top: 2rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .intro {
+      margin-bottom: 2rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .project {
+      margin-bottom: 1.5rem;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .contact a {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Collapsible Blog */
+    .collapsible {
+      background: #1a1a1a;
+      color: var(--fg);
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1rem;
+      margin-top: 1rem;
+      border-left: 4px solid var(--accent);
+      transition: background 0.3s;
+    }
+
+    .collapsible:hover {
+      background: #222;
+    }
+
+    .active, .collapsible:focus {
+      background-color: #222;
+    }
+
+    .content {
+      padding: 0 1rem 1rem 1rem;
+      display: none;
+      overflow: hidden;
+      background-color: #181818;
+      border-left: 4px solid var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="intro">
+    <h1><!-- Your Name Here --></h1>
+    <p>Tinkerer | Hobbyist electronics</p>
+    <p class="contact">
+      <a href="mailto:warren@fluxwav.net">Email</a>
+      <a href="https://google.com" target="_blank">LinkedIn placeholder</a>
+      <a href="https://google.com" target="_blank">GitHub placeholder</a>
+      <a href="/resume.pdf" target="_blank">Resume</a>
+    </p>
+  </header>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>I am a student studying Cybersecurity and System Administration.
+    I work on hobby electronics projects, and enjoy tinkering with microcontrollers like the Pi Pico and Arduino. I like to document my work, experiment with emerging tech, and explore new tools and ideas.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Home Lab in progress</h3>
+      <p class="meta">Home Lab / 2025</p>
+      <p>Practicing and emulating routers and switches using pfsense and gns3. Once I have the funds to purchase real hardware I will be building a media server while practicing proper backup procedures. My main goal is to always be learning.
+      I have an old computer I plan on running TrueNAS on and filling with all my hard drives until I can afford a proper NAS solution with at least 20TB of useable storage after RAID.</p>
+    </div>
+
+    <div class="project">
+      <h3>Placeholder for custom keyboard build</h3>
+      <p class="meta">IoT / 2024</p>
+      <p>Handwired custom split keyboard using Pi Picos and QMK firmware</p>
+    </div>
+  </section>
+
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>If you’re interested in working together or just want to chat, feel free to reach out.</p>
+    <p class="contact">
+      <a href="mailto:warren@fluxwav.net">Email</a>
+      <a href="https://google.com" target="_blank">LinkedIn placeholder</a>
+      <a href="https://google.com" target="_blank">GitHub placeholder</a>
+      <a href="/resume.pdf" target="_blank">Resume</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 <Warren - Flux Wav>. Powered by HTML & GitHub Pages.
+  </footer>
+
+  <script>
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const content = button.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
